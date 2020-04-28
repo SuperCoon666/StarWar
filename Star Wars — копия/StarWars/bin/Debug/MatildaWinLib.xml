@@ -1,0 +1,417 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MatildaWinLib</name>
+    </assembly>
+    <members>
+        <member name="T:MatildaWinLib.Matilda">
+            <summary>
+            Платформа для обучения в Школе программистов Аносова
+            </summary>
+        </member>
+        <member name="M:MatildaWinLib.Matilda.#ctor">
+            <summary>
+            Конструктор
+            </summary>
+        </member>
+        <member name="M:MatildaWinLib.Matilda.CreateSuperImage(System.String,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Создать SuperImage
+            </summary>
+            <param name="path_img">Полный путь к файлу с картинкой или только его название, если файл располагается в папке "C:\Школа программистов Аносова\Images\"</param>
+            <param name="left">Сколько пикселей слева</param>
+            <param name="top">Сколько пикселей сверху</param>
+            <param name="width">Сколько пикселей ширина</param>
+            <param name="height">Сколько пикселей высота</param>
+            <returns>Возвращает экземпляр класса SuperImage</returns>
+        </member>
+        <member name="M:MatildaWinLib.Matilda.CreateSuperImage(System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.String)">
+            <summary>
+            Создать SuperImage
+            </summary>
+            <param name="path_img">Полный путь к файлу с картинкой или только его название, если файл располагается в папке "C:\Школа программистов Аносова\Images\"</param>
+            <param name="left">Сколько пикселей слева</param>
+            <param name="top">Сколько пикселей сверху</param>
+            <param name="width">Сколько пикселей ширина</param>
+            <param name="height">Сколько пикселей высота</param>
+            <param name="name">Название объекта</param>
+            <returns>Возвращает экземпляр класса SuperImage</returns>
+        </member>
+        <member name="M:MatildaWinLib.Matilda.AddSuperImage(MatildaWinLib.SuperImage)">
+            <summary>
+            Зарегистрировать ранее созданный экземпляр SuperImage
+            </summary>
+            <param name="item">Экземпляр SuperImage</param>
+        </member>
+        <member name="M:MatildaWinLib.Matilda.RemoveSuperImage(MatildaWinLib.SuperImage)">
+            <summary>
+            Уничтожить SuperImage
+            </summary>
+        </member>
+        <member name="M:MatildaWinLib.Matilda.ClearAllImages">
+            <summary>
+            Удалить все картинки
+            </summary>
+        </member>
+        <member name="M:MatildaWinLib.Matilda.RandomInt(System.Int32,System.Int32)">
+            <summary>
+            Получить случайное целое число в диапазоне от min до max
+            </summary>
+        </member>
+        <member name="M:MatildaWinLib.Matilda.RandomDouble">
+            <summary>
+            Получить случайное число c плавающей запятой в диапазоне от 0 до 1
+            </summary>
+        </member>
+        <member name="M:MatildaWinLib.Matilda.RandomDouble(System.Double,System.Double)">
+            <summary>
+            Получить случайное число в диапазоне в диапазоне от min до max
+            </summary>
+        </member>
+        <member name="M:MatildaWinLib.Matilda.Beep(System.Int32,System.Int32)">
+            <summary>
+            Воспроизвести звук с помощью спикера c заданной частотой и продолжительностью
+            </summary>
+            <param name="frequency">Частота в Герцах. Значение от 37 до 32767.</param>
+            <param name="duration">Продолжительность в миллисекундах</param>
+        </member>
+        <member name="M:MatildaWinLib.Matilda.Beep">
+            <summary>
+            Воспроизвести звук с помощью спикера
+            </summary>
+        </member>
+        <member name="M:MatildaWinLib.Matilda.Beep(System.Collections.Generic.List{MatildaWinLib.Matilda.BeepItem})">
+            <summary>
+            Воспроизвести последовательность звуков с помощью спикера c заданной частотой и продолжительностью
+            </summary>
+            <param name="items">Список из элементов BeepItem, описывающих частоту и продолжительность звука</param>
+        </member>
+        <member name="M:MatildaWinLib.Matilda.Dispose">
+            <summary>
+            Уничтожение экземпляра объекта Matilda
+            </summary>
+        </member>
+        <member name="M:MatildaWinLib.Matilda.IsVerticalConnection(MatildaWinLib.SuperImage,MatildaWinLib.SuperImage)">
+            <summary>
+            Метод для Сезона 4. Вернет true, если произошло столкновение шарика с доской сверху или снизу.
+            </summary>
+            <param name="ball">Шарик</param>
+            <param name="brick">Кирпич</param>
+        </member>
+        <member name="M:MatildaWinLib.Matilda.GridGetChangedFieldName(System.Windows.Forms.DataGridView,System.Windows.Forms.DataGridViewCellEventArgs)">
+            <summary>
+            Возвращает название поля в таблицы базы данных, значение которого изменилось в DataGridView
+            </summary>
+            <param name="grid">DataGridView, в котором произошло изменение значения</param>
+            <param name="e">Входной параметр e, который передается в событиях CellValueChanged или CellEndEdit у DataGridView</param>
+            <returns>Название поля в БД</returns>
+        </member>
+        <member name="M:MatildaWinLib.Matilda.GridGetRowValue(System.Windows.Forms.DataGridView,System.String)">
+            <summary>
+            Метод возвращает значение текущей записи в DataGridView в поле, переданном в качестве входного параметра.
+            </summary>
+            <param name="grid">DataGridView, которое отображает таблицу</param>
+            <param name="field_name">Название поля в таблице</param>
+            <returns>Значение текущей записи в DataGridView в поле, переданном в качестве входного параметра</returns>
+        </member>
+        <member name="M:MatildaWinLib.Matilda.GridGetChangedValue(System.Windows.Forms.DataGridView,System.Windows.Forms.DataGridViewCellEventArgs)">
+            <summary>
+            Возвращает значение, которое изменилось в DataGridView
+            </summary>
+            <param name="grid">DataGridView, в котором произошло изменение значения</param>
+            <param name="e">Входной параметр e, который передается в событиях CellValueChanged или CellEndEdit у DataGridView</param>
+            <returns>Новое значение</returns>
+        </member>
+        <member name="M:MatildaWinLib.Matilda.GridGetRowID(System.Windows.Forms.DataGridView,System.Windows.Forms.DataGridViewCellEventArgs)">
+            <summary>
+             Возвращает значение поля id для текущей записи в DataGridView
+            </summary>
+            <param name="grid">DataGridView, которое отображает таблицу</param>
+            <param name="e">Входной параметр e, который передается в событиях CellValueChanged или CellEndEdit у DataGridView</param>
+            <returns>Значение поля id для текущей записи в DataGridView</returns>
+        </member>
+        <member name="P:MatildaWinLib.Matilda.Control">
+            <summary>
+            Control, на котором будем рисовать
+            </summary>
+        </member>
+        <member name="P:MatildaWinLib.Matilda.SuperImages">
+            <summary>
+            Список созданных картинок
+            </summary>
+        </member>
+        <member name="E:MatildaWinLib.Matilda.OnConnection">
+            <summary>
+            Вызывается тогда, когда два SuperImage пересекаются
+            </summary>
+        </member>
+        <member name="T:MatildaWinLib.Matilda.SuperImageCollection">
+            <summary>
+            Коллекция объектов SuperImage
+            </summary>
+        </member>
+        <member name="M:MatildaWinLib.Matilda.SuperImageCollection.GetEnumerator">
+            <summary>
+            Взвращает интерфейс IEnumerator для коллекции с объектами SuperImage
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:MatildaWinLib.Matilda.SuperImageCollection.Item(System.Int32)">
+            <summary>
+            Возвращает объект SuperImage по его номеру
+            </summary>
+            <param name="index">Номер объекта SuperImage</param>
+            <returns>Объект SuperImage по его номеру</returns>
+        </member>
+        <member name="P:MatildaWinLib.Matilda.SuperImageCollection.Count">
+            <summary>
+            Текущее количество "живых" объектов SuperImage созданных объектом Matilda
+            </summary>
+        </member>
+        <member name="T:MatildaWinLib.Matilda.BeepItem">
+            <summary>
+            Структура, которая описывает частоту и продолжительность сигнала спикера
+            </summary>
+        </member>
+        <member name="M:MatildaWinLib.Matilda.BeepItem.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Конструктор
+            </summary>
+            <param name="frequency">Частота в Герцах. Значение от 37 до 32767.</param>
+            <param name="duration">Продолжительность в миллисекундах</param>
+        </member>
+        <member name="P:MatildaWinLib.Matilda.BeepItem.Frequency">
+            <summary>
+            Частота в Герцах. Значение от 37 до 32767.
+            </summary>
+        </member>
+        <member name="P:MatildaWinLib.Matilda.BeepItem.Duration">
+            <summary>
+            Продолжительность в миллисекундах
+            </summary>
+        </member>
+        <member name="T:MatildaWinLib.DelegateSuperImageConnection">
+            <summary>
+            Делегат, отписывающий входные параметры в событии OnConnection при столкновении 2-х объектов SuperImage
+            </summary>
+            <param name="a">Первый объект SuperImage</param>
+            <param name="b">Второй объект SuperImage</param>
+        </member>
+        <member name="T:MatildaWinLib.SuperImagePainter">
+            <summary>
+            С помощью данного класса можно рисовать. Данный класс используется при рисовании через событие SuperImagePaint у SuperImage
+            </summary>
+        </member>
+        <member name="M:MatildaWinLib.SuperImagePainter.DrawLine(System.Int32,System.Int32,System.Int32,System.Int32,System.Drawing.Color,System.Int32)">
+            <summary>
+            Нарисовать линию
+            </summary>
+            <param name="left1">1-я точка - расстояние слева</param>
+            <param name="top1">1-я точка - расстояние сверху</param>
+            <param name="left2">2-я точка - расстояние слева</param>
+            <param name="top2">2-я точка - расстояние сверху</param>
+            <param name="color">Цвет линии</param>
+            <param name="width">Толщина линии в пикселях</param>
+        </member>
+        <member name="M:MatildaWinLib.SuperImagePainter.DrawRectangle(System.Int32,System.Int32,System.Int32,System.Int32,System.Drawing.Color,System.Int32)">
+            <summary>
+            Нарисовать прямоугольник
+            </summary>
+            <param name="left">Расстояние слева до левой верхней точки прямоугольника</param>
+            <param name="top">Расстояние сверху до левой верхней точки прямоугольника</param>
+            <param name="width">Ширина прямоугольника</param>
+            <param name="height">Высота прямоугольника</param>
+            <param name="color">Цвет прямоугольника</param>
+            <param name="width_line">Толщина линии в пикселях</param>
+        </member>
+        <member name="M:MatildaWinLib.SuperImagePainter.FillRectangle(System.Int32,System.Int32,System.Int32,System.Int32,System.Drawing.Color)">
+            <summary>
+            Залить прямоугольник цветом
+            </summary>
+            <param name="left">Расстояние слева до левой верхней точки прямоугольника</param>
+            <param name="top">Расстояние сверху до левой верхней точки прямоугольника</param>
+            <param name="width">Ширина прямоугольника</param>
+            <param name="height">Высота прямоугольника</param>
+            <param name="color">Цвет</param>
+        </member>
+        <member name="M:MatildaWinLib.SuperImagePainter.DrawPolygon(System.Collections.Generic.List{System.Drawing.Point},System.Drawing.Color,System.Int32)">
+            <summary>
+            Нарисовать многоуголник
+            </summary>
+            <param name="points">Массив точек (координат углов многоугольника)</param>
+            <param name="color">Цвет</param>
+            <param name="width_line">Толщина линии</param>
+        </member>
+        <member name="M:MatildaWinLib.SuperImagePainter.FillPolygon(System.Collections.Generic.List{System.Drawing.Point},System.Drawing.Color)">
+            <summary>
+            Залить многоуголник цветом
+            </summary>
+            <param name="points">Массив точек (координат углов многоугольника)</param>
+            <param name="color">Цвет</param>
+        </member>
+        <member name="M:MatildaWinLib.SuperImagePainter.DrawEllipse(System.Int32,System.Int32,System.Int32,System.Int32,System.Drawing.Color,System.Int32)">
+            <summary>
+            Нарисовать окружность
+            </summary>
+            <param name="left">Расстояние слева до левой верхней точки виртуального прямоугольника, в котором будет нарисована окружность</param>
+            <param name="top">Расстояние сверху до левой верхней точки виртуального прямоугольника, в котором будет нарисована окружность</param>
+            <param name="width">Ширина виртуального прямоугольника, в котором будет нарисована окружность</param>
+            <param name="height">Высота виртуального прямоугольника, в котором будет нарисована окружность</param>
+            <param name="color">Цвет линии</param>
+            <param name="width_line">Толщина линии в пикселях</param>
+        </member>
+        <member name="M:MatildaWinLib.SuperImagePainter.FillEllipse(System.Int32,System.Int32,System.Int32,System.Int32,System.Drawing.Color)">
+            <summary>
+            Залить окружность цветом
+            </summary>
+            <param name="left">Расстояние слева до левой верхней точки виртуального прямоугольника, в котором будет нарисована окружность</param>
+            <param name="top">Расстояние сверху до левой верхней точки виртуального прямоугольника, в котором будет нарисована окружность</param>
+            <param name="width">Ширина виртуального прямоугольника, в котором будет нарисована окружность</param>
+            <param name="height">Высота виртуального прямоугольника, в котором будет нарисована окружность</param>
+            <param name="color">Цвет</param>
+        </member>
+        <member name="M:MatildaWinLib.SuperImagePainter.DrawString(System.String,System.Int32,System.Int32,System.Int32,System.Drawing.Color)">
+            <summary>
+            Нарисовать текст
+            </summary>
+            <param name="text">Текст</param>
+            <param name="font_size">Размер шрифта</param>
+            <param name="left">Расстояние слева до надписи в пикселях</param>
+            <param name="top">Расстояние сверху до надписи в пикселях</param>
+            <param name="color">Цвет надписи</param>
+        </member>
+        <member name="M:MatildaWinLib.SuperImagePainter.DrawImage(System.String,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Нарисовать картинку
+            </summary>
+            <param name="file_path">Полный путь к файлу с картинкой или только его название, если файл располагается в папке "C:\Школа программистов Аносова\Images\"</param>
+            <param name="left">Сколько слева пикселей до левой верхней точки картинки</param>
+            <param name="top">Сколько сверху пикселей до левой верхней точки картинки</param>
+            <param name="width">Ширина картинки в пикселях</param>
+            <param name="height">Высота картики в пикселях</param>
+        </member>
+        <member name="T:MatildaWinLib.SuperImage">
+            <summary>
+            Объект-картинка
+            </summary>
+        </member>
+        <member name="M:MatildaWinLib.SuperImage.#ctor(MatildaWinLib.Matilda,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.String)">
+            <summary>
+            Создать SuperImage
+            </summary>
+            <param name="matilda">Экземпляр класса Matilda</param>
+            <param name="path_img">Полный путь к файлу с картинкой или только его название, если файл располагается в папке "C:\Школа программистов Аносова\Images\"</param>
+            <param name="left">Сколько пикселей слева</param>
+            <param name="top">Сколько пикселей сверху</param>
+            <param name="width">Сколько пикселей ширина</param>
+            <param name="height">Сколько пикселей высота</param>
+            <param name="name">Название объекта</param>
+            <returns>Возвращает экземпляр класса SuperImage</returns>
+        </member>
+        <member name="M:MatildaWinLib.SuperImage.LoadImage(System.String)">
+            <summary>
+            Загрузить новую картинку
+            </summary>
+            <param name="file_path">Полный путь к файлу с картинкой или только его название, если файл располагается в папке "C:\Школа программистов Аносова\Images\"</param>
+        </member>
+        <member name="M:MatildaWinLib.SuperImage.LoadSubImage(System.String,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Загрузить дополнительную картинку
+            </summary>
+            <param name="file_path">Полный путь к файлу с картинкой или только его название, если файл располагается в папке "C:\Школа программистов Аносова\Images\"</param>
+            <param name="left">Сколько пикселей слева в системе координат основной картинки</param>
+            <param name="top">Сколько пикселей сверху в системе координат основной картинки</param>
+            <param name="width">Ширина картинки</param>
+            <param name="height">Высота картинки</param>
+        </member>
+        <member name="M:MatildaWinLib.SuperImage.DoChangePosition(MatildaWinLib.SuperImage)">
+            <summary>
+            Метод вызывается при измениении позиции SuperImage
+            </summary>
+            <param name="sender"></param>
+        </member>
+        <member name="M:MatildaWinLib.SuperImage.Dispose">
+            <summary>
+            Удалить картинку
+            </summary>
+        </member>
+        <member name="M:MatildaWinLib.SuperImage.ToString">
+            <summary>
+            Возвращает строкое описание объекта SuperImage
+            </summary>
+            <returns>Строкое описание объекта SuperImage</returns>
+        </member>
+        <member name="P:MatildaWinLib.SuperImage.PathImg">
+            <summary>
+            Путь к картинке
+            </summary>
+        </member>
+        <member name="P:MatildaWinLib.SuperImage.Route">
+            <summary>
+            Направление перемещения графического объекта
+            </summary>
+        </member>
+        <member name="P:MatildaWinLib.SuperImage.Name">
+            <summary>
+            Наименование картинки. Свойство, как правило, используется в собыьтии OnConnection для того, чтобы понять кто с кем столкнулся
+            </summary>
+        </member>
+        <member name="E:MatildaWinLib.SuperImage.OnPaint">
+            <summary>
+            Событие, которое вызывается в момент рисования объекта SuperImage
+            </summary>
+        </member>
+        <member name="P:MatildaWinLib.SuperImage.Left">
+            <summary>
+            Количество пикселей слева
+            </summary>
+        </member>
+        <member name="P:MatildaWinLib.SuperImage.Top">
+            <summary>
+            Количество пикселей сверху
+            </summary>
+        </member>
+        <member name="P:MatildaWinLib.SuperImage.Width">
+            <summary>
+            Ширина
+            </summary>
+        </member>
+        <member name="P:MatildaWinLib.SuperImage.Height">
+            <summary>
+            Высота
+            </summary>
+        </member>
+        <member name="P:MatildaWinLib.SuperImage.Rectangle">
+            <summary>
+            Прямоугольник картинки
+            </summary>
+        </member>
+        <member name="P:MatildaWinLib.SuperImage.CenterPoint">
+            <summary>
+            Координаты центра картинки
+            </summary>
+        </member>
+        <member name="P:MatildaWinLib.SuperImage.IsDisposed">
+            <summary>
+            Вернёт true, если объект уничтожен
+            </summary>
+        </member>
+        <member name="P:MatildaWinLib.SuperImage.Offset">
+            <summary>
+            Величина смещения объекта при его перемещении
+            </summary>
+        </member>
+        <member name="P:MatildaWinLib.SuperImage.Speed">
+            <summary>
+            Скорость объекта
+            </summary>
+        </member>
+        <member name="T:MatildaWinLib.SuperImage.DelegateSuperImagePaint">
+            <summary>
+            Описание входных параметров метода, который вызывется при срабатывании события DelegateSuperImagePaint
+            </summary>
+            <param name="s">Объект SuperImage, который сейчас отрисовывается</param>
+            <param name="p">Объект, который умеет рисовать различные геометрические фигуры и картинки</param>
+        </member>
+    </members>
+</doc>
